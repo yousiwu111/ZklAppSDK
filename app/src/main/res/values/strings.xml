@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ZklAppSDK</string>
+    <array name="demo_name">
+        <item >状态栏</item>
+        <item >DataBinding 数据绑定</item>
+        <item >按钮在输入法之上</item>
+        <item>内容移动的广告</item>
+    </array>
+</resources>

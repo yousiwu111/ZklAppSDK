@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="user"
+            type="org.zkl.zklappsdk.model.DataBinding" />
+
+        <variable
+            name="presenter"
+            type="org.zkl.zklappsdk.activity.DataBindingActivity.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+        <EditText
+            android:id="@+id/mEtInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_stroke_corner_3_gray"
+            android:hint="请输入"
+            android:minHeight="30dp"
+            android:onTextChanged="@{presenter::onTextChanged}"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/text1"
+            android:textSize="14sp" />
+
+        <!--注意这里使用presenter.onClick或者presenter::onClick都可以-->
+        <TextView
+            android:id="@+id/mTxtBindingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{presenter.onClick}"
+            android:text="@{user.username}"
+            android:textColor="@color/text1"
+            android:textSize="15sp" />
+
+        <Button
+            android:onClick="@{()->presenter.onClickBinding(user)}"
+            android:layout_width="wrap_content"
+            android:text="从xml中获取上面的数据"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</layout>
