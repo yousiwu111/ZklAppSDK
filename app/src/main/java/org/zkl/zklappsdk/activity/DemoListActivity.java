@@ -58,20 +58,24 @@ public class DemoListActivity extends BaseActivity {
         mAdapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(View view, int i) {
-                switch (i){
+                switch (i) {
                     case 0:
                         break;
-                        //databing 数据绑定
+                    //databing 数据绑定
                     case 1:
-                        startActivity(new Intent(mContext,DataBindingActivity.class));
+                        startActivity(new Intent(mContext, DataBindingActivity.class));
                         break;
-                        //布局随输入法出现而上移
+                    //布局随输入法出现而上移
                     case 2:
-                        startActivity(new Intent(mContext,SoftInputUpButtonActivity.class));
+                        startActivity(new Intent(mContext, SoftInputUpButtonActivity.class));
                         break;
-                        //广告图移动
+                    //广告图移动
                     case 3:
-                        startActivity(new Intent(mContext,AdImageActivity.class));
+                        startActivity(new Intent(mContext, AdImageActivity.class));
+                        break;
+                    //标签切换
+                    case 4:
+                        startActivity(new Intent(mContext, TagButtonActivity.class));
                         break;
                 }
             }

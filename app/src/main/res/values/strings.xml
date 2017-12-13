@@ -5,5 +5,6 @@
         <item >DataBinding 数据绑定</item>
         <item >按钮在输入法之上</item>
         <item>内容移动的广告</item>
+        <item>标签按钮点击切换</item>
     </array>
 </resources>

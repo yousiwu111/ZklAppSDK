@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <org.zkl.zklappsdk.view.SegmentedGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:sc_border_width="1dp"
+            app:sc_checked_text_color="@color/red"
+            app:sc_corner_radius="10dp"
+            app:sc_tint_color="#009688"
+            app:sc_unchecked_tint_color="@color/white">
+
+            <RadioButton
+                android:id="@+id/button11"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One" />
+
+            <RadioButton
+                android:id="@+id/button12"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Two" />
+
+            <RadioButton
+                android:id="@+id/button13"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Three" />
+
+        </org.zkl.zklappsdk.view.SegmentedGroup>
+
+        <org.zkl.zklappsdk.view.SegmentedGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:sc_border_width="2dp"
+            app:sc_corner_radius="10dp"
+            app:sc_tint_color="@color/text1"
+            app:sc_unchecked_tint_color="@color/white">
+
+
+            <RadioButton
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one" />
+
+            <RadioButton
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one" />
+
+            <RadioButton
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one" />
+
+        </org.zkl.zklappsdk.view.SegmentedGroup>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff33b5e5"
+            android:scrollbars="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:minHeight="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <org.zkl.zklappsdk.view.SegmentedGroup
+                    android:id="@+id/mSegment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:sc_unchecked_tint_color="#ff33b5e5"
+                    app:sc_checked_text_color="#ff33b5e5"
+                    app:sc_tint_color="@color/white">
+                </org.zkl.zklappsdk.view.SegmentedGroup>
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="add"
+            android:text="添加" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="remove"
+            android:text="删除" />
+
+    </LinearLayout>
+</layout>

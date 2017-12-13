@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="radio_button_selected_color">#ff33b5e5</color>
+    <color name="radio_button_unselected_color">#e0e0e0</color>
+
     <!--主字体-->
     <color name="text1">#303a40</color>
     <color name="text3">#a8afb2</color>
