@@ -15,7 +15,7 @@
             android:orientation="horizontal"
             app:sc_border_width="1dp"
             app:sc_checked_text_color="@color/red"
-            app:sc_corner_radius="10dp"
+            app:sc_corner_radius="0dp"
             app:sc_tint_color="#009688"
             app:sc_unchecked_tint_color="@color/white">
 

@@ -12,6 +12,9 @@ import org.zkl.zklappsdk.activity.BaseActivity;
 import org.zkl.zklappsdk.activity.DemoListActivity;
 import org.zkl.zklappsdk.databinding.ActivityMainBinding;
 
+/**
+ * 首页
+ */
 public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding bind;
@@ -21,7 +24,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         bind = bindView(R.layout.activity_main);
         mContext = this;
         initEvent();
@@ -34,7 +37,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         super.onClick(view);
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.mTxtDemoButton:
                 startActivity(new Intent(mContext, DemoListActivity.class));
                 break;

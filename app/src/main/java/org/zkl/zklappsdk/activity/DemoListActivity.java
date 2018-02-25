@@ -77,10 +77,20 @@ public class DemoListActivity extends BaseActivity {
                     case 4:
                         startActivity(new Intent(mContext, TagButtonActivity.class));
                         break;
+                    //ViewDragHelper使用
+                    case 5:
+                        startActivity(new Intent(mContext, ViewDragHelperActivity.class));
+                        break;
                 }
             }
         });
         bind.mRvDemoList.setAdapter(mAdapter);
         bind.mRvDemoList.setLayoutManager(new LinearLayoutManager(mContext));
+        mAdapter.setOnRecyclerViewItemLongClickListener(new BaseQuickAdapter.OnRecyclerViewItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(View view, int i) {
+                return false;
+            }
+        });
     }
 }

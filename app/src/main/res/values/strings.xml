@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">ZklAppSDK</string>
+    <string name="app_name">小乔</string>
     <array name="demo_name">
         <item >状态栏</item>
         <item >DataBinding 数据绑定</item>
-        <item >按钮在输入法之上</item>
-        <item>内容移动的广告</item>
-        <item>标签按钮点击切换</item>
+        <item >输入法弹出不挡住按钮</item>
+        <item>列表滚动时图片局部移动展示</item>
+        <item>多个标签单选自定义View</item>
+        <item>ViewDragHelper使用</item>
     </array>
 </resources>

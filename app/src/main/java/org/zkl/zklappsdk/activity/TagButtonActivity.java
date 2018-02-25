@@ -29,7 +29,6 @@ public class TagButtonActivity extends BaseActivity {
 
     private void initEvent() {
         bind.button11.setChecked(true);
-
     }
 
     private void addButton(SegmentedGroup group) {
