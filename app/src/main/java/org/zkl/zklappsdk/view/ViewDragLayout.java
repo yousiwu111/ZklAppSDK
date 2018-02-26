@@ -65,7 +65,6 @@ public class ViewDragLayout extends LinearLayout {
             }
 
             //在边界拖动时回调
-
             @Override
             public void onEdgeDragStarted(int edgeFlags, int pointerId) {
                 mDragger.captureChildView(mEdgeTrackerView, pointerId);
@@ -85,7 +84,7 @@ public class ViewDragLayout extends LinearLayout {
     @Override
     public void computeScroll() {
         if (mDragger.continueSettling(true)) {
-            Log.d("debug","执行：computeScroll");
+            Log.d("debug","执行：computeScroll，mAutoBackView.getLeft()："+mAutoBackView.getLeft()+"，mAutoBackView.getTop()："+mAutoBackView.getTop());
             invalidate();
         }
     }

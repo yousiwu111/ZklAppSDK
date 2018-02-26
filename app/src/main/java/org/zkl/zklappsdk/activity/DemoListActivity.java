@@ -14,6 +14,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.databinding.ActivityDemoListBinding;
+import org.zkl.zklappsdk.util.MyOrientationEventListener;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,6 +31,7 @@ public class DemoListActivity extends BaseActivity {
     private BaseQuickAdapter<String> mAdapter;
     private List<String> mData;
     private Toolbar mToolbar;
+    private MyOrientationEventListener listener;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,7 +41,20 @@ public class DemoListActivity extends BaseActivity {
         initEvent();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        listener.enable();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        listener.disable();
+    }
+
     private void initEvent() {
+        listener = new MyOrientationEventListener(mContext);
         mToolbar = findViewById(R.id.mToolbar);
         //后退
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -80,6 +95,10 @@ public class DemoListActivity extends BaseActivity {
                     //ViewDragHelper使用
                     case 5:
                         startActivity(new Intent(mContext, ViewDragHelperActivity.class));
+                        break;
+                    //RecyclerView不用适配器预览完整效果
+                    case 6:
+                        startActivity(new Intent(mContext, RecyclerViewPreviewActivity.class));
                         break;
                 }
             }

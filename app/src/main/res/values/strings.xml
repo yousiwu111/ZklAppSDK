@@ -7,5 +7,6 @@
         <item>列表滚动时图片局部移动展示</item>
         <item>多个标签单选自定义View</item>
         <item>ViewDragHelper使用</item>
+        <item>RecyclerView不用适配器预览完整效果</item>
     </array>
 </resources>
