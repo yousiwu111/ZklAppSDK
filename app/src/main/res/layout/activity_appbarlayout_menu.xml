@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <TextView
+            android:id="@+id/mTvScroll"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_solid_red_3"
+            android:gravity="center"
+            android:text="layout_scrollFlags = scroll "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/mTvEnterAlways"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_solid_red_3"
+            android:gravity="center"
+            android:text="layout_scrollFlags = enterAlways "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/mTvEnterAlwayscollaps"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_solid_red_3"
+            android:gravity="center"
+            android:text="layout_scrollFlags = enterAlwaysCollaps "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/mTvEnterExitUntilCollapsed"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_solid_red_3"
+            android:gravity="center"
+            android:text="layout_scrollFlags = exitUntilCollapsed "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/mTvCollapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_solid_red_3"
+            android:gravity="center"
+            android:text="CollapsingToolbarLayout "
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</layout>

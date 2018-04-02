@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:navigationIcon="@mipmap/ic_launcher"
+            app:logo="@mipmap/ic_launcher"
+            app:title="title"
+            app:subtitle="sub title"
+            app:titleTextColor="@color/white"
+            android:minHeight="?attr/actionBarSize"/>
+
+    </LinearLayout>
+</layout>

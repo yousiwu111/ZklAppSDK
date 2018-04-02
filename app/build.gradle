@@ -34,4 +34,6 @@ dependencies {
     //RecyclerView的通用适配器
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
     implementation 'com.android.support:design:26.1.0'
+
+    compile 'com.github.razerdp:AnimatedPieView:1.2.1'
 }

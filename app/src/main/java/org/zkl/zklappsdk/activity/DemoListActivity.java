@@ -13,6 +13,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
 import org.zkl.zklappsdk.R;
+import org.zkl.zklappsdk.activity.AppBarLayout.AppBarLayoutMenuActivity;
+import org.zkl.zklappsdk.activity.Toolbar.ToolbarActivity;
 import org.zkl.zklappsdk.databinding.ActivityDemoListBinding;
 import org.zkl.zklappsdk.util.MyOrientationEventListener;
 
@@ -99,6 +101,22 @@ public class DemoListActivity extends BaseActivity {
                     //RecyclerView不用适配器预览完整效果
                     case 6:
                         startActivity(new Intent(mContext, RecyclerViewPreviewActivity.class));
+                        break;
+                    //Toolbar的使用
+                    case 7:
+                        startActivity(new Intent(mContext, ToolbarActivity.class));
+                        break;
+                    //AppBarLayout的使用
+                    case 8:
+                        startActivity(new Intent(mContext, AppBarLayoutMenuActivity.class));
+                        break;
+                    //popupwindow
+                    case 9:
+                        startActivity(new Intent(mContext, PopupwindowActivity.class));
+                        break;
+                        //饼状图
+                    case 10:
+                        startActivity(new Intent(mContext, PieActivity.class));
                         break;
                 }
             }

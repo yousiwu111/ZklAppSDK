@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--always：使菜单项一直显示在ToolBar上。
+        ifRoom：如果有足够的空间，这个值会使菜单项显示在ToolBar上。
+        never：使菜单项永远都不出现在ToolBar上,在…的子项中显示。
+        withText：使菜单项和它的图标，菜单文本一起显示。-->
+    <item
+        android:id="@+id/more"
+        android:icon="@mipmap/icon_more_white"
+        android:title="更多"
+        app:showAsAction="ifRoom" />
+</menu>

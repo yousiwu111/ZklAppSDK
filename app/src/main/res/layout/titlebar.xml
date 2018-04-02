@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_bar"
+    android:layout_width="match_parent"
+    android:layout_height="41dp"
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="onClick"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text1"
+        android:textSize="16.5dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:minWidth="1dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/red"
+        android:textSize="13.5dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/ib_right_1"
+        android:layout_width="42dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/ib_right_2"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/ib_right_1"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" />
+
+</RelativeLayout>
