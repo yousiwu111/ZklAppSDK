@@ -14,7 +14,9 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.activity.AppBarLayout.AppBarLayoutMenuActivity;
+import org.zkl.zklappsdk.activity.TextSwitcher.TextSwitcherActivity;
 import org.zkl.zklappsdk.activity.Toolbar.ToolbarActivity;
+import org.zkl.zklappsdk.activity.retrofit2okhttp3rxjava.HttpActivity;
 import org.zkl.zklappsdk.databinding.ActivityDemoListBinding;
 import org.zkl.zklappsdk.util.MyOrientationEventListener;
 
@@ -117,6 +119,14 @@ public class DemoListActivity extends BaseActivity {
                         //饼状图
                     case 10:
                         startActivity(new Intent(mContext, PieActivity.class));
+                        break;
+                        //retrofit2 rxjava okhttp3
+                    case 11:
+                        startActivity(new Intent(mContext, HttpActivity.class));
+                        break;
+                        //TextSwitcher实现文字上下翻滚
+                    case 12:
+                        startActivity(new Intent(mContext, TextSwitcherActivity.class));
                         break;
                 }
             }
