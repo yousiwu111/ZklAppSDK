@@ -1,5 +1,6 @@
 package org.zkl.zklappsdk.activity.TextSwitcher;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,26 +44,22 @@ public class TextSwitcherActivity extends BaseActivity {
                 return tv;
             }
         });
-
-//        bind.ts.setInAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_in_bottom));
-//        bind.ts.setOutAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_out_up));
-//        bind.ts.setText(getResources().getStringArray(R.array.demo_name)[0]);
         handler.sendEmptyMessage(0);
         bind.ts.setText(getResources().getStringArray(R.array.demo_name)[0]);
     }
 
-    private  Handler handler = new Handler(){
+    private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if (i==getResources().getStringArray(R.array.demo_name).length){
-                i=0;
+            if (i == getResources().getStringArray(R.array.demo_name).length) {
+                i = 0;
             }
             bind.ts.setInAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_in_bottom));
             bind.ts.setOutAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_out_up));
             bind.ts.setText(getResources().getStringArray(R.array.demo_name)[i]);
             i++;
-            handler.sendEmptyMessageDelayed(0,2000);
+            handler.sendEmptyMessageDelayed(0, 2000);
         }
     };
 }

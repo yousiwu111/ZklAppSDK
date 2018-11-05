@@ -16,6 +16,7 @@ import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.activity.AppBarLayout.AppBarLayoutMenuActivity;
 import org.zkl.zklappsdk.activity.TextSwitcher.TextSwitcherActivity;
 import org.zkl.zklappsdk.activity.Toolbar.ToolbarActivity;
+import org.zkl.zklappsdk.activity.lottie.LottieActivity;
 import org.zkl.zklappsdk.activity.retrofit2okhttp3rxjava.HttpActivity;
 import org.zkl.zklappsdk.databinding.ActivityDemoListBinding;
 import org.zkl.zklappsdk.util.MyOrientationEventListener;
@@ -127,6 +128,14 @@ public class DemoListActivity extends BaseActivity {
                         //TextSwitcher实现文字上下翻滚
                     case 12:
                         startActivity(new Intent(mContext, TextSwitcherActivity.class));
+                        break;
+                        //lottie动画
+                    case 13:
+                        startActivity(new Intent(mContext, LottieActivity.class));
+                        break;
+                        //猫眼电影选择效果
+                    case 14:
+                        startActivity(new Intent(mContext,MovieRecyclerViewActivity.class));
                         break;
                 }
             }

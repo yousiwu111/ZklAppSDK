@@ -35,7 +35,7 @@ public class AppBarLayoutMenuActivity extends BaseActivity {
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view) {//6214835891406751
         super.onClick(view);
         Intent intent = null;
         switch (view.getId()) {
