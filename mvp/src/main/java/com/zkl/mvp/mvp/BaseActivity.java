@@ -64,6 +64,11 @@ public class BaseActivity extends Activity implements BaseView,View.OnClickListe
     }
 
     @Override
+    public Context getContext() {
+        return this;
+    }
+
+    @Override
     public void onClick(View v) {
 //        if (v.getId() == R.id.ib_back) {
 //            finish();
