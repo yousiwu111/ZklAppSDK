@@ -137,6 +137,10 @@ public class DemoListActivity extends BaseActivity {
                     case 14:
                         startActivity(new Intent(mContext,MovieRecyclerViewActivity.class));
                         break;
+                        // 可以缩放的RecyclerView
+                    case 15:
+                        ZoomRecyclerViewActivity.startActivity(mContext);
+                        break;
                 }
             }
         });
