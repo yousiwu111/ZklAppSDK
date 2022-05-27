@@ -4,9 +4,9 @@ import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.annotation.Nullable;
-import android.support.v4.view.GestureDetectorCompat;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.core.view.GestureDetectorCompat;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -51,6 +51,11 @@ public class ZoomRecyclerView extends RecyclerView {
 
     boolean isScaling = false;    // 是否正在缩放
 
+    private RecyclerPointListener recyclerPointListener;
+
+    public void setRecyclerPointListener(RecyclerPointListener recyclerPointListener) {
+        this.recyclerPointListener = recyclerPointListener;
+    }
 
     public ZoomRecyclerView(Context context) {
         this(context, null);
@@ -130,6 +135,12 @@ public class ZoomRecyclerView extends RecyclerView {
 
     @Override
     public boolean onTouchEvent(MotionEvent e) {
+        if (e.getToolType(0) != MotionEvent.TOOL_TYPE_FINGER) {
+            if (recyclerPointListener != null) {
+                recyclerPointListener.setPoint(e, mScaleFactor, mTranX, mTranY);
+            }
+            return true;
+        }
         //Log.e("aaa","mTranX"+mTranX+",mTranY:"+mTranY);
         boolean gesture = mGestureDetector.onTouchEvent(e);
         boolean scaleTouch = mScaleDetector.onTouchEvent(e);
@@ -196,6 +207,10 @@ public class ZoomRecyclerView extends RecyclerView {
             zoom(startFactor, endFactor);
             return super.onDoubleTap(e);
         }
+    }
+
+    public interface RecyclerPointListener {
+        void setPoint(MotionEvent e, float scale, float tranX, float tranY);
     }
 
 }

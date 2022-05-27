@@ -1,12 +1,12 @@
 package org.zkl.zklappsdk.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -140,6 +140,10 @@ public class DemoListActivity extends BaseActivity {
                         // 可以缩放的RecyclerView
                     case 15:
                         ZoomRecyclerViewActivity.startActivity(mContext);
+                        break;
+                        // path matrix
+                    case 16:
+                        startActivity(new Intent(mContext,PathMatrixActivity.class));
                         break;
                 }
             }

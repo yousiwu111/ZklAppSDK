@@ -1,17 +1,14 @@
 package org.zkl.zklappsdk.activity;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import androidx.databinding.DataBindingUtil;
+
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.PopupWindow;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.databinding.ActivityPopupwindowBinding;

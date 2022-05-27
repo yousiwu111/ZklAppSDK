@@ -1,10 +1,8 @@
 package org.zkl.zklappsdk.activity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.databinding.ActivityViewdragBinding;

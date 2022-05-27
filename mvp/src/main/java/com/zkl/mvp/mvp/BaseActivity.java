@@ -3,7 +3,7 @@ package com.zkl.mvp.mvp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +27,7 @@ public class BaseActivity extends Activity implements BaseView,View.OnClickListe
      * @param <T>         DataBinding
      * @return DataBinding
      */
-    public <T extends android.databinding.ViewDataBinding> T bindView(int layoutResID) {
+    public <T extends androidx.databinding.ViewDataBinding> T bindView(int layoutResID) {
         T bind = DataBindingUtil.setContentView(this, layoutResID);
         //设置状态栏,必须要在setContentView之后设置
         setStatusBar();

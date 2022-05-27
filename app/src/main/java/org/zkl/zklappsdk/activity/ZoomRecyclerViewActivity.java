@@ -3,12 +3,13 @@ package org.zkl.zklappsdk.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.adapter.ZoomRecyclerViewAdapter;
 import org.zkl.zklappsdk.databinding.ActivityZoomRecyclerviewBinding;
+import org.zkl.zklappsdk.util.CardStemDrawManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,5 +50,7 @@ public class ZoomRecyclerViewActivity extends BaseActivity {
         data.add("9");
         data.add("10");
         mAdapter.setData(data);
+
+        CardStemDrawManager manager = new CardStemDrawManager(bind.zoomRectclerView);
     }
 }

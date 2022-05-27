@@ -1,13 +1,11 @@
 package org.zkl.zklappsdk.activity.AppBarLayout;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.activity.BaseActivity;
 import org.zkl.zklappsdk.databinding.ActivityCollapsingtoolbarlayoutBinding;
-
-import java.text.Bidi;
 
 /**
  * (1) 折叠Title（Collapsing title）：当布局内容全部显示出来时，title是最大的，但是随着View逐步移出屏幕顶部，title变得越来越小。你可以通过调用setTitle函数来设置title。

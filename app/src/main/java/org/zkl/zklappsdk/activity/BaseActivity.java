@@ -2,10 +2,10 @@ package org.zkl.zklappsdk.activity;
 
 import android.app.Activity;
 import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -34,7 +34,7 @@ public class BaseActivity extends Activity implements View.OnClickListener {
     /**
      * 页面绑定，主要是为了在setContentView之后设置状态栏
      */
-    public <T extends android.databinding.ViewDataBinding> T bindView(int layoutResID) {
+    public <T extends androidx.databinding.ViewDataBinding> T bindView(int layoutResID) {
         T bind = DataBindingUtil.setContentView(this, layoutResID);
         //设置状态栏,必须要在setContentView之后设置
 //        setStatusBar();

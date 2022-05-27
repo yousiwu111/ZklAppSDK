@@ -1,7 +1,7 @@
 package org.zkl.zklappsdk.activity.lottie;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import org.zkl.zklappsdk.R;
 import org.zkl.zklappsdk.activity.BaseActivity;
